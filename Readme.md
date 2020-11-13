@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Roman Marusyn](https://up.htmlacademy.ru/adaptive/21/user/1519787).
-* Наставник: `Неизвестно`.
+* Наставник: `Роман Марченко`.
 
 ---
 
