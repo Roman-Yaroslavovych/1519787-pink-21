@@ -1,1 +1,259 @@
 // Начните писать стили здесь
+// Colors
+@whiteback: #FFFFFF;
+@darkbluetextcolor: #283645;
+@black: #000000;
+@blueback: #1D2631;
+@greybackground: #F2F2F2;
+@pinkred:  #D22856;
+
+// Viewports
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
+@mobile-width-only: 659px;
+
+// @import("global/fonts.less");
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("fonts/open-sans.woff2") format("woff2"),
+    url("fonts/open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("fonts/open-sans-bold.woff2") format("woff2"),
+    url("fonts/open-sans-bold.woff") format("woff");
+}
+
+// @import("global/global.less");
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: @black;
+}
+
+// @import("blocks/page.less");
+
+.page {
+  height: 100%;
+  font-size: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 27px;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  background-color: @whiteback;
+  color: @darkbluetextcolor;
+}
+
+// @import("blocks/page-header.less")
+
+.page-header {
+  background-color:@black;
+  background-image: url(../img/back-mobile.jpg);
+  background-repeat: no-repeat;
+  list-style: none;
+  color: @whiteback;
+}
+
+// @import("blocks/main-navigation.less")
+
+.main-navigation {
+  background-color: rgba(0,0,0,0.3);
+  list-style: none;
+  color: @whiteback;
+
+    .navigation-list {
+    list-style: none;
+    color: @whiteback;
+
+    a {
+      color: @whiteback;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 32px;
+      align-items: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// @import("blocks/download-aplication.less")
+
+  .download-aplication {
+    background-color: @blueback;
+
+    .download-header__slogan {
+      color: @whiteback;
+      font-weight: 300;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+.download-aplication__accessibility {
+  font-size: 14px;
+  line-height: 24px;
+  color: @whiteback;
+}
+
+.download-aplication__download {
+  color: @whiteback;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+// @import("blocks/advantages.less")
+
+.advantages {
+  background-color: @greybackground;
+}
+
+.advantages__offer-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.advantages__list {
+  list-style: none;
+
+  .advantages__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: @black;
+    text-align: center;
+  }
+}
+
+.advantages__description {
+  font-size: 14px;
+  line-height: 24px;
+  color: @darkbluetextcolor;
+  text-align: center;
+}
+
+// @import("blocks/reviews.less")
+
+.reviews {
+  background-color: @whiteback;
+}
+
+.reviews__name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: @black;
+}
+
+.reviews__reviews-body {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: @darkbluetextcolor;
+}
+
+// @import("blocks/price.less")
+
+.price {
+  background-color: @greybackground;
+}
+
+.price__title {
+  background-color: @darkbluetextcolor;
+
+    .price__tariff {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      color: @whiteback;
+      text-align: center;
+      text-transform: uppercase;
+  }
+}
+
+.price__tariff-price {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: @whiteback;
+  text-transform: uppercase;
+}
+
+.price__tariff-description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+// @import("blocks/contacts.less")
+
+.contacts {
+  background-color: @whiteback;
+}
+
+.contacts__title {
+  font-size: 24px;
+  text-align: center;
+  color: @darkbluetextcolor;
+}
+
+.contacts__item {
+  list-style: none;
+
+  span {
+    color: @black;
+    text-align: center;
+  }
+}
+
+.contacts {
+  &__phone,
+  &__mail,
+  &__our-contacts {color: @pinkred;
+  text-align: center;}
+}
+
+// @import("blocks/page-footer.less")
+
+.page-footer {
+  background-color: @whiteback;
+}
+
+.copyright__text {
+  font-size: 14px;
+  line-height: 18px;
+}
