@@ -2,6 +2,11 @@
   background-color: @blueback;
 }
 
+.download-aplication__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .download-header__slogan {
   color: @whiteback;
   font-weight: 300;
@@ -13,6 +18,7 @@
   font-size: 14px;
   line-height: 24px;
   color: @whiteback;
+  text-align: center;
 }
 
 .download-aplication__download {
@@ -23,4 +29,66 @@
 
 .dowload-aplication__list {
   list-style: none;
+}
+
+.systems-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .download-aplication {
+    background-image: url(/source/img/phone-tablet.png);
+    background-repeat: no-repeat;
+    min-width: 660px;
+  }
+  .download-aplication__wrapper {
+    width: 300px;
+    margin-left: 20px;
+  }
+  .download-aplication__phone-image {
+    display: none;
+  }
+  .download-header__slogan {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 102px;
+    padding-bottom: 39px;
+    text-align: center;
+  }
+
+  .download-aplication__download {
+    display: block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 29px;
+    padding: 21px 48px;
+    margin-bottom: 51px;
+  }
+
+  .download-aplication__accessibility {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding-bottom: 119px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-aplication__wrapper {
+    margin-left: 130px;
+  }
 }

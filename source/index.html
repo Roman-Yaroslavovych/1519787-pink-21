@@ -9,30 +9,32 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/pink.svg" alt="логотип PINK" width="74px" height="23px">
-      </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toogle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-navigation__wraper">
-          <ul class="navigation-list">
-            <li class="navigation-list__item navigation-list__item--active">
-              <a>главная</a>
-            </li>
-            <li class="navigation-list__item">
-              <a href="#">фотографии</a>
-            </li>
-            <li class="navigation-list__item">
-              <a href="#">конкурс</a>
-            </li>
-            <li class="navigation-list__item">
-              <a href="#">html academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wraper">
+        <a class="page-header__logo">
+          <img src="img/pink.svg" alt="логотип PINK" width="74px" height="23px">
+        </a>
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+          <button class="main-navigation__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-navigation__wraper">
+            <ul class="main-navigation__navigation-list navigation-list">
+              <li class="navigation-list__item navigation-list__item--active">
+                <a>главная</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">фотографии</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">конкурс</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">html academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Что такое "Пинк"?</h1>
@@ -47,13 +49,13 @@
           <a class="download-aplication__download" href="#">Скачать приложение</a>
           <ul class="dowload-aplication__list systems-list">
             <li class="systems-list__item">
-              <a class="mac" href="#"><img src="img/apple-logo.svg" alt="mac os">mac</a>
+              <a class="mac" href="#"><img src="img/apple-logo.svg" alt="mac os"></a>
             </li>
             <li class="systems-list__item">
-              <a class="android" href="#"><img src="img/android-logo.svg" alt="android os">android</a>
+              <a class="android" href="#"><img src="img/android-logo.svg" alt="android os"></a>
             </li>
             <li class="systems-list__item">
-              <a class="windows" href="#"><img src="img/microsoft-logo.svg" alt="windows os">windows</a>
+              <a class="windows" href="#"><img src="img/microsoft-logo.svg" alt="windows os"></a>
             </li>
           </ul>
           <p class="download-aplication__accessibility">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -63,24 +65,33 @@
         <div class="advantages__wrapper">
           <div class="advantages__advantages-offer">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <h2 class="advantages__offer-title">Устали от серости мегаполиса?</h2>
-            <h2 class="advantages__offer-title">Нам есть, что вам предложить!</h2>
+            <h2 class="advantages__offer-title">Устали от серости мегаполиса?<br> Нам есть, что вам<br> предложить!</h2>
           </div>
-          <ul class="advantages__list advantages-list">
-            <li class="advantages__item">
-              <h3 class="advantages__title">Поднимает настроение</h3>
-              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-          <a class="advantages__iphone" href="#"><img src="img/iphone 3.jpg" alt="всем привет!"></a>
+          <div class="advantages__tablet-desktop-width">
+            <ul class="advantages__list advantages-list">
+              <li class="advantages__item">
+                <h3 class="advantages__title">Поднимает настроение</h3>
+                <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__title">Меняет мир вокруг</h3>
+                <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__title">Заводит новых друзей</h3>
+                <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+            <a class="advantages__iphone" href="#"><img src="img/iphone 3.jpg" alt="всем привет!"></a>
+            <a class="advantages__clock" href="#"><img src="./img/clock-tablet.svg" height="276px" width="238px" alt="Эффект на 24 часа!"></a>
+            <div class="advantages__describe-efect">
+              <h3 class="advantages__describe-efect-title">Эффект на 24 часа!</h3>
+              <p class="advantages__describe-efect-description">Британские ученые провели исследования и доказали,
+                что положительный эффект от использования приложения длится целые сутки!
+              </p>
+              <a class="advantages__learn-about-research">Узнать больше об исследовании</a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="reviews">
@@ -88,6 +99,7 @@
           <h2 class="visually-hidden">Отзывы</h2>
               <blockquote class="reviews__reviews-list slider__item slider__item--active">
                 <h3 class="reviews__name">Николай Петров</h3>
+                <span class="reviews__autor-describe">25 лет, водитель трамвая</span>
                 <p class="reviews__reviews-body">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </blockquote>
           <p class="slider__toggles">
@@ -145,7 +157,7 @@
         <div class="contacts__contacts-wraper">
           <h2 class="visually-hidden">Наши контакты</h2>
           <div class="contacts__our-contacts">
-            <b class="contacts__title">Остались вопросы?
+            <b class="contacts__title">Остались вопросы?<br>
             Свяжитесь с нами!</b>
             <ul class="contacts__list">
               <li class="contacts__item">
@@ -158,12 +170,13 @@
                   <span class="contacts__our-mail">Пишите:</span>mail@htmlacademy.ru
                 </a>
               </li>
-              <li class="contacts__item">
+              <li class="contacts__item contacts__item-address">
                 <span class="contacts__address-title">Приезжайте в гости:</span>
                 <p class="contacts__our-contacts">ул. Большая
                   Конюшенная, 19/8</p>
-                <a class="map" href="#"><img src="#" alt="карта"></a>
               </li>
+            </ul>
+              <a class="map" href="#"><img src="#" alt="карта"></a>
           </div>
         </div>
       </section>

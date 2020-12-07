@@ -1,9 +1,16 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   background-color: @black;
-  background-image: url(../img/back-mobile.jpg);
-  background-repeat: no-repeat;
   list-style: none;
   color: @whiteback;
+}
+
+.page-header__wraper {
+  width: 280px;
+  margin: 0 auto;
+  background-image: url(../img/back-mobile.jpg);
+  background-repeat: no-repeat;
 }
 
 .navigation-list a {
@@ -24,3 +31,28 @@
   text-align: center;
   color: @whiteback;
 }
+
+.page-header__logo {
+  height: 66px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    height: 110px;
+  }
+  .page-header__wraper {
+    width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .page-header__wraper {
+    width: 940px;
+  }
+}
+
+

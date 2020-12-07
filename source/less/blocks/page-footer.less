@@ -2,8 +2,35 @@
   background-color: @whiteback;
 }
 
+.page-footer__wrapper {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
 .copyright__text {
   font-size: 14px;
   line-height: 18px;
   color: @darkbluetextcolor;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    margin: 0 130px;
+  }
 }
