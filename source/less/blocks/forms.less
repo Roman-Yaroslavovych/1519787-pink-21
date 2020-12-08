@@ -2,35 +2,116 @@
   background-color: @whiteback;
 }
 
+.forms__wrapper {
+  margin: 0 20px;
+
+
+  @media (min-width: @desktop-width) {
+    margin: 0 130px;
+  }
+}
+
+.forms__main-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4;
+  }
+}
+
 .forms__competition-describe {
   font-family: Open Sans;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: @darkbluetextcolor;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 130px;
+  }
 }
 
-.forms__surname-label {
+.forms__passport {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  order: 1;
+}
+
+.forms__passport label {
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: @pinkred;
+  padding-bottom: 17px;
 }
 
-.forms {
-  &__middle-name-label,
-  &__name-label,
-  &__surname-input {
+.forms__passport input {
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: @pinkred;
+  min-width: 280px;
   display: block;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+      min-width: 521px;
+    }
+}
+
+.forms__passport input::placeholder {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.forms__achievements-wrapper {
+  order: 2;
+  @media (min-width: @tablet-width) {
+    order: 4;
+    margin-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 
 .forms__achievements {
   background-color: @greybackground;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.forms__burnt-lable {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.forms__souvenir-lable {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
 
 .forms__achievements-describe {
@@ -55,8 +136,42 @@
   }
 }
 
-.forms__contcts-form {
+.forms__contacts-wrapper {
+  order: 3;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.forms__contacts-title {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @pinkred;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.forms__contacts-form {
   background-color: @whiteback;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+  }
 }
 
 .forms {
@@ -70,12 +185,38 @@
   }
 }
 
+.forms__contacts-phone {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.forms__mail {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
 .forms {
   &__phone-input,
   &__mail-input {
     font-size: 18px;
     line-height: 30px;
     color: @darkbluetextcolor;
+  }
+}
+
+.forms__mobile-system-wrapper {
+  order: 4;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
   }
 }
 
@@ -106,12 +247,34 @@
   }
 }
 
+.forms__comments-wrapper {
+  order: 5;
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+  }
+}
+
 .forms__textarea {
   font-family: Open Sans;
   font-size: 18px;
   line-height: 30px;
   color: @darkbluetextcolor;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    min-width: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 816px;
+  }
+}
+
+.forms__submit {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .forms__required-fields {
