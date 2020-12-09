@@ -9,56 +9,57 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/pink.svg" alt="логотип PINK" width="74px" height="23px">
-      </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toogle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-navigation__wraper">
-          <ul class="navigation-list">
-            <li class="navigation-list__item navigation-list__item--active">
-              <a>главная</a>
-            </li>
-            <li class="navigation-list__item">
-              <a href="#">фотографии</a>
-            </li>
-            <li class="navigation-list__item">
-              <a href="#">конкурс</a>
-            </li>
-            <li class="navigation-list__item">
-              <a href="#">html academy</a>
-            </li>
-          </ul>
-          <h2 class="navigation-list__catalog-title">Фотографии
-            пользователей
-        </h2>
-        </div>
-      </nav>
+      <div class="page-header__wraper">
+        <a class="page-header__logo">
+          <img src="img/pink.svg" alt="логотип PINK" width="74px" height="23px">
+        </a>
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+          <button class="main-navigation__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-navigation__wraper">
+            <ul class="main-navigation__navigation-list navigation-list">
+              <li class="navigation-list__item navigation-list__item--active">
+                <a>главная</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">фотографии</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">конкурс</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">html academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p class="page-header__catalog-title catalog__catalog-title">Фотографии
+          пользователей</p>
+      </div>
     </header>
     <main class="catalog">
+      <p class="catalog__catalog-describe">Взгляните на фотографии, которые выкладывают пользователи!
+        Видите, как не хватает ваших?
+      </p>
+      <div class="catalog__panorama-photo">
+        <blockquote class="catalog__user-photo panorama-photo">
+          <img src="#" alt="панорама дня" width="320px" height="137px">
+          <div class="catalog__author-info catalog__catalog-wrapper">
+              <cite class="catalog__author-name">Анна</cite>
+              <span class="catalog__photos-time">(5 минут назад)</span>
+              <p class="catalog__text">Прыгать или нет? Напишите в
+                  комментарии свой совет и
+                  смотрите прямую трансляцию в
+                  перископе, задавайте свои вопросы!
+              </p>
+              <span class="catalog__photos-likes">Нравится: 215</span>
+          </div>
+        </blockquote>
+      </div>
         <div class="catalog__catalog-wrapper">
             <section class="catalog__our-photos">
-                <p class="catalog__catalog-describe">Взгляните на фотографии, которые выкладывают пользователи!
-                    Видите, как не хватает ваших?
-                </p>
                 <ul class="catalog__photos-list">
-                    <li class="catalog__photos-item">
-                        <blockquote class="catalog__user-photo panorama-photo">
-                            <img src="#" alt="панорама дня" width="320px" height="137px">
-                            <div class="catalo__author-info">
-                                <cite class="catalog__author-name">Анна</cite>
-                                <span class="catalog__photos-time">(5 минут назад)</span>
-                                <p class="catalog__text">Прыгать или нет? Напишите в
-                                    комментарии свой совет и
-                                    смотрите прямую трансляцию в
-                                    перископе, задавайте свои вопросы!
-                                </p>
-                                <span class="catalog__photos-likes">Нравится: 215</span>
-                            </div>
-                        </blockquote>
-                    </li>
                     <li class="catalog__photos-item">
                       <blockquote class="catalog__user-photo">
                           <img src="#" alt="фотография авто" width="280px" height="180px">
@@ -137,16 +138,20 @@
                   Выкладывайте все, что накопилось в телефоне!
                 </p>
             </section>
-            <section class="photos-setings">
-              <div class="photos-setings__wrapper">
-                <h2 class="visually-hidden">настрой свое фото</h2>
-                <img src="#" alt="зимний пейзаж" width="280px" height="374px">
-                <svg class="photos-setings__cat"></svg>
-                <svg class="photos-setings__color"></svg>
-                <svg class="photos-setings__contrast"></svg>
-                <div class="photos-setings__buttons">
-                  <button class="photos-setings__button-sent button" type="button">Запостить</button>
-                  <button class="photos-setings__button-canceling button" type="button">Отмена</button>
+            <section class="photos-settings">
+              <div class="catalog__catalog-wrapper">
+                <div class="photos-settings__settings-group">
+                  <div class="photos-settings__settings">
+                    <h2 class="visually-hidden">настрой свое фото</h2>
+                    <img src="#" alt="зимний пейзаж" width="280px" height="374px">
+                  </div>
+                  <div class="photos-settings__buttons">
+                    <svg class="photos-settings__cat"></svg>
+                    <svg class="photos-settings__color"></svg>
+                    <svg class="photos-settings__contrast"></svg>
+                    <button class="photos-settings__button-sent button" type="button">Запостить</button>
+                    <button class="photos-settings__button-canceling button" type="button">Отмена</button>
+                  </div>
                 </div>
               </div>
             </section>

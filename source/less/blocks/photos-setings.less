@@ -1,3 +1,28 @@
-.photos-setings {
+.photos-settings {
   background-color: @greybackground;
+}
+
+.photos-settings__settings-group {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-right: 90px;
+  }
+}
+
+.photos-settings__buttons {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.photos-settings__settings {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
