@@ -1,5 +1,6 @@
 .reviews {
   background-color: @whiteback;
+  margin-top: 0;
 }
 
 .reviews__reviews-wrapper {
@@ -16,6 +17,13 @@
   line-height: 30px;
   text-align: center;
   color: @black;
+  margin-top: 50px;
+  margin-bottom: 31px;
+  order: 0;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .reviews__autor-describe {
@@ -26,10 +34,16 @@
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 44px;
   color: @darkbluetextcolor;
 }
 
 .slider__toggles {
+  margin-top: 0;
+  padding-bottom: 49px;
+  padding-top: 45px;
+  margin-bottom: 0;
   display: flex;
   justify-content: space-around;
 
@@ -68,10 +82,8 @@
   .reviews__reviews-list {
     display: flex;
     flex-direction: column;
-  }
-
-  .reviews__name {
-    order: 1;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .reviews__autor-describe {

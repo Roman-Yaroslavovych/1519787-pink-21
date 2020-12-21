@@ -1,30 +1,48 @@
 .download-aplication {
+  position: relative;
   background-image: url(../img/back-mobile.jpg);
   background-repeat: no-repeat;
-  background-position: 50% -27%;
+  background-position: 50% top;
+  z-index: 1;
+  top: -66px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
-    min-width: 660px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url(../img/back-tablet.jpg);
+    top: -110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url(../img/back-desktop.jpg);
   }
 }
 
 .download-aplication__wrapper {
   width: 87%;
-  margin: 0 auto;
+  margin: 0 20px;
+  margin-top: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width){
     width: 300px;
-    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 130px;
   }
 }
 
-.download-aplication__phone-image img {
-  width: 320px;
-  height: 286px;
-margin: 0 auto;
+.download-aplication__phone-image {
 
   @media (min-width: @tablet-width) {
-    display: none;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-right: 20px;
+    margin-bottom: 0;
+
   }
 }
 
@@ -35,16 +53,29 @@ margin: 0 auto;
   font-weight: 300;
   font-size: 24px;
   text-align: center;
-  margin: 0;
-  padding-top: 29px;
-  padding-bottom: 34px;
+  padding-top: 95px;
+  margin-bottom: 27px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 102px;
-    padding-bottom: 39px;
+    padding-top: 212px;
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 224px;
+  }
+}
+
+.download-slogan-viev {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 
@@ -57,6 +88,8 @@ margin: 0 auto;
   color: @whiteback;
   text-align: center;
   margin-top: 31px;
+  padding-bottom: 38px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -84,25 +117,31 @@ margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 51px;
-    margin-top: 39px;
+    margin-top: 0;
   }
 }
 
 .download-aplication__download-systems {
   background-color: @blueback;
   padding-top: 28px;
-  margin-top: 0;
+  margin-top: -8px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: transparent;
+    padding-top: 34px;
+  }
 }
 
 .dowload-aplication__list {
+  padding-top: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding-left: 0;
 
-}
-
-@media (min-width: @desktop-width) {
-  .download-aplication__wrapper {
-    margin-left: 130px;
+  @media (min-width: @tablet-width) {
+    justify-content: space-around;
   }
 }
