@@ -1,5 +1,5 @@
 .navigation-list {
-  display: inline;
+  display: block;
   list-style: none;
   text-align: center;
   padding: 0;
@@ -16,14 +16,9 @@
   }
 }
 
-.main-navigation--opened {
-  margin-top: -9px;
-}
-
 .navigation-list a {
   color: @whiteback;
   display: block;
-  position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
   text-align: center;
@@ -36,6 +31,7 @@
 }
 
 .navigation-list__item {
+  position: relative;
   color: @whiteback;
   font-weight: bold;
   font-size: 18px;
