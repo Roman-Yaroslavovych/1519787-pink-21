@@ -1,43 +1,109 @@
 .main-navigation {
-  background-color: rgba(0,0,0,0.3);
-  list-style: none;
-  color: @whiteback;
-}
+  background-color: @darkbluetextcolor;
 
-.navigation-list {
-  list-style: none;
-  color: @whiteback;
-  margin: 0 auto;
-}
 
-.navigation-list__item {
-  color: @whiteback;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 32px;
-  align-items: center;
-  text-transform: uppercase;
+  @media (min-width: @desktop-width) {
+    background-color: rgba(0, 0, 0, 0.3)
+  }
 }
 
 .main-navigation__wraper {
-  display: flex;
+  display: block;
   justify-content: center;
   margin: 0 auto;
-  width: 280px;
-}
+  padding: 0;
+  min-width: 280px;
 
-@media (min-width: @tablet-width) {
-  .main-navigation__wraper {
-    width: 620px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 620px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-navigation__wraper {
-    width: 940px;
-  }
-  .main-navigation__toogle {
+.main-navigation__toggle {
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 50px;
+  height: 4px;
+  background-color: @whiteback;
+  box-shadow: 0 10px 0 0 @whiteback, 0 20px 0 0 @whiteback;
+}
+
+.main-navigation--closed .main-navigation__toggle:hover::before {
+  background-color: @pinkred;
+  box-shadow: 0 10px 0 0 @pinkred, 0 20px 0 0 @pinkred;
+}
+
+.main-navigation--closed .main-navigation__toggle:active::before {
+  background-color: fade(@pinkred, 30%);
+  box-shadow: 0 10px 0 0 fade(@pinkred, 30%), 0 20px 0 0 fade(@pinkred, 30%);
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  top: 0;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    width: 23px;
+    height: 2px;
+    background-color: @whiteback;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @pinkred;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@pinkred, 30%);
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-navigation--closed .navigation-list__item {
+    display: none;
+  }
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
 }
 
