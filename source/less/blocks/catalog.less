@@ -17,16 +17,71 @@
 }
 
 .catalog__catalog-title {
+  font-family: "Open Sans";
+  font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
+  display: block;
+  padding-top: 36px;
+  padding-bottom: 84px;
+  margin-bottom: 0;
+  margin-top: 0;
   text-align: center;
   color: @whiteback;
+  background-image: url(../img/back-mobile.jpg);
+  background-position: 50% -66px;
+  background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
     font-size: 50px;
     line-height: 68px;
+    background-image: url(../img/back-tablet.jpg);
+    background-position: 50% -110px;
+    padding-top: 81px;
+    padding-bottom: 143px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+    padding-bottom: 104px;
+    background-image: url(../img/back-desktop.jpg);
+  }
+}
+
+.catalog__catalog-describe {
+  color:@darkbluetextcolor;
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  margin: 54px 20px 60px 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    margin: 100px 20px 85px 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 97px;
+  }
+}
+
+.catalog__catalog-describe br {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.catalog blockquote {
+  background-color: @greybackground;
+  margin-bottom: 20px;
 }
 
 .catalog__photos-list {
@@ -50,11 +105,23 @@
   margin: 0;
 }
 
-.catalog__catalog-describe {
-  color:@darkbluetextcolor;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: center;
+.catalog__author-info {
+  background-color: @greybackground;
+}
+
+.panorama-photo {
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.catalog__user-photo-text {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 .catalog__author-name {
@@ -64,6 +131,12 @@
   line-height: 24px;
   text-align: center;
   color: @darkbluetextcolor;
+}
+
+.catalog__panorama-photo-author {
+  @media (min-width: @tablet-width) {
+    text-align: start;
+  }
 }
 
 .catalog__photos-time {
@@ -76,7 +149,7 @@
 }
 
 .catalog__text {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -90,13 +163,51 @@
   text-align: right;
   text-transform: uppercase;
   color: @pinkred;
+  padding-left: 48px;
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+  background-position: 17px, 0;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    text-align: start;
+    margin-left: 30px;
+    padding-left: 0;
+    background-position: 227px, 0;
+  }
+}
+
+.catalog__user-photo-likes {
+  @media (min-width: @tablet-width) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  background-position: 106px, 0;
+  margin-left: 171px;
+  }
 }
 
 .catalog__catalog-describe-bottom {
   font-family: Open Sans;
   font-weight: normal;
   font-size: 14px;
+  line-height: 30px;
   text-align: center;
   color: @darkbluetextcolor;
+  margin-top: 49px;
+  margin-bottom: 52px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    margin-top: 73px;
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 67px;
+    margin-bottom: 75px;
+  }
 }
 

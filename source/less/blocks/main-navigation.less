@@ -1,7 +1,6 @@
 .main-navigation {
   background-color: @darkbluetextcolor;
 
-
   @media (min-width: @desktop-width) {
     background-color: rgba(0, 0, 0, 0.3)
   }
@@ -10,7 +9,7 @@
 .main-navigation__wraper {
   display: block;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 20px;
   padding: 0;
   min-width: 280px;
 
@@ -63,16 +62,14 @@
 }
 
 .main-navigation--opened .main-navigation__toggle {
-  top: 0;
-  right: 0;
+  top: 21px;
+  right: 20px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 23px;
-    right: 20px;
-    width: 23px;
+    width: 30px;
     height: 2px;
     background-color: @whiteback;
   }
