@@ -10,4 +10,25 @@
   margin: 0;
   background-color: @whiteback;
   color: @darkbluetextcolor;
+  background-image: url(../img/back-mobile.jpg);
+  background-position: 50% top;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/back-mobile2x.jpg);
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url(../img/back-tablet.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/back-tablet2x.jpg);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url(../img/back-desktop.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/back-desktop2x.jpg);
+    }
+  }
 }
