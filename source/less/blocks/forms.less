@@ -73,7 +73,6 @@
 
 .forms__passport {
   min-width: 280px;
-  margin: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -120,6 +119,7 @@ display: flex;
 }
 
 .forms__passport-form input {
+  display: block;
   font-size: 14px;
   text-transform: uppercase;
   color: @pinkred;
@@ -128,14 +128,18 @@ display: flex;
   padding-top: 23px;
   padding-bottom: 23px;
   padding-left: 20px;
+  border: 2px solid @borderlightgray;
+  border-radius: 1px;
+  width: 100%;
 
     @media (min-width: @tablet-width) {
       margin-left: 0;
-      min-width: 521px;
+
     }
 
     @media (min-width: @desktop-width) {
       margin-right: 0;
+      min-width: 336px;
     }
 }
 
@@ -147,9 +151,10 @@ display: flex;
 .forms__achievements-wrapper {
   background-color: @greybackground;
   order: 2;
+
   @media (min-width: @tablet-width) {
+    margin-top: 65px;
     order: 4;
-    margin-left: 60px;
     background-color: @whiteback;
   }
 
@@ -201,8 +206,14 @@ display: flex;
   text-align: center;
   text-transform: uppercase;
   color: @pinkred;
-  margin-top: 44px;
+  padding-top: 42px;
   margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
 }
 
 .forms__achievements label {
@@ -261,6 +272,10 @@ display: flex;
   margin-bottom: 44px;
   order: 3;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: -1;
@@ -277,6 +292,9 @@ display: flex;
 
   @media (min-width: @tablet-width) {
     display: block;
+    padding-left: 31px;
+    padding-right: 31px;
+    margin-bottom: 61px;
   }
 }
 
@@ -294,7 +312,7 @@ display: flex;
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2;
+    column-gap: 75px;
     margin: 0 60px;
   }
 }
@@ -312,12 +330,6 @@ display: flex;
   @media (min-width: @desktop-width) {
     margin-right: 37px;
   }
-}
-
-.forms__contacts-form input {
-padding-top: 23px;
-padding-bottom: 23px;
-padding-left: 21px;
 }
 
 .forms__contacts-phone {
@@ -339,10 +351,89 @@ padding-left: 21px;
 }
 
 .forms__contacts-form input {
+  display: block;
+  position: relative;
     font-size: 18px;
-    line-height: 30px;
+    height: 13px;
     color: @darkbluetextcolor;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    padding-left: 21px;
+    border: 2px solid @borderlightgray;
+    border-radius: 1px;
+    z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 470px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 343px;
+  }
 }
+
+.forms__phone-icon {
+  text-align: left;
+  z-index: 2;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      background-image: url(../img/phone-icon.svg);
+      background-repeat: no-repeat;
+      top: -97px;
+      left: 413px;
+  }
+}
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      background-image: url(../img/phone-icon.svg);
+      background-repeat: no-repeat;
+      top: -97px;
+      left: 289px;
+    }
+  }
+}
+
+.forms__mail-icon {
+  z-index: 3;
+  position: relative;
+
+    @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      background-image: url(../img/mail-icon.svg);
+      top: -97px;
+      left: 413px;
+      background-repeat: no-repeat;
+      }
+    }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      background-image: url(../img/mail-icon.svg);
+      top: -97px;
+      left: 289px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 
 .forms__mobile-system-wrapper {
   background-color: @greybackground;
@@ -356,11 +447,21 @@ padding-left: 21px;
 
 .forms__mobile-system {
   min-width: 280px;
-  margin: 0 20px;
   background-color: @greybackground;
 
   @media (min-width: @tablet-width) {
     background-color: @whiteback;
+    margin-right: 0;
+  }
+}
+
+.forms__system-fields {
+  border: none;
+
+  @media (min-width: @tablet-width) {
+  display: block;
+  border: 2px solid @borderlightgray;
+  border-radius: 1px;
   }
 }
 
@@ -379,8 +480,15 @@ padding-left: 21px;
   text-align: center;
   text-transform: uppercase;
   color: @pinkred;
-  margin-top: 42px;
+  padding-top: 42px;
   margin-bottom: 52px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    margin-top: 46px;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
 
 .forms__mobile-system label {
@@ -449,7 +557,13 @@ padding-left: 21px;
   margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 60px;
+    margin: 0;
+    margin-top: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
   @media (min-width: @desktop-width) {
@@ -471,6 +585,24 @@ padding-left: 21px;
   margin-bottom: 22px;
 }
 
+.forms__coments-describe {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @pinkred;
+  margin-top: 42px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width){
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
 .forms__textarea {
   font-family: Open Sans;
   font-size: 18px;
@@ -482,10 +614,7 @@ padding-left: 21px;
   border: 2px solid #E5E5E5;
   border-radius: 1px;
   margin-bottom: 52px;
-
-  @media (min-width: @tablet-width) {
-    min-width: 500px;
-  }
+  width: 100%;
 
   @media (min-width: @desktop-width) {
     min-width: 816px;
@@ -503,6 +632,7 @@ padding-left: 21px;
 .forms__submit-button {
   min-width: 276px;
   display: block;
+  margin: 0 auto;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -517,6 +647,12 @@ padding-left: 21px;
   border: 2px solid @greanbutton;
   border-radius: 1px;
   margin-bottom: 46px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 52px;
+  }
+
 }
 
 .forms__required-fields {
