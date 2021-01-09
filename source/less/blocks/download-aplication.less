@@ -1,26 +1,27 @@
 .download-aplication__download-systems {
   position: relative;
   margin-bottom: 0;
-  background: url(../img/phone-in-hand.png) 0% 110px no-repeat scroll, url(../img/back-mobile.jpg) 50% -66px no-repeat scroll;
+  background: url(../img/phone-in-hand.png) 0% 183px no-repeat scroll, url(../img/back-mobile.jpg) 50% top no-repeat;
+  background-size: 320px 280px, 100% 463px;
   @media (min-resolution: 2dppx) {
-    background: url(../img/phone-in-hand2x.png) 0% 110px no-repeat scroll, url(../img/back-mobile2x.jpg) 50% -66px no-repeat scroll;
+    background: url(../img/phone-in-hand2x.png) 0% 183px no-repeat scroll, url(../img/back-mobile2x.jpg)  50% top no-repeat scroll;
   }
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-top: 0;
-    background: url(../img/phone-in-hand-tablet.png) 0% 110px no-repeat scroll, url(../img/back-tablet.jpg) 50% -110px no-repeat scroll;
+    background: url(../img/phone-in-hand-tablet.png) 0% 184px no-repeat scroll, url(../img/back-tablet.jpg) 50% top no-repeat scroll;
     @media (min-resolution: 2dppx) {
-      background: url(../img/phone-in-hand-tablet2x.png) 0% 110px no-repeat scroll, url(../img/back-tablet2x.jpg) 50% -110px no-repeat scroll;
+      background: url(../img/phone-in-hand-tablet2x.png) 0% 184px no-repeat scroll, url(../img/back-tablet2x.jpg) 50% top no-repeat scroll;
       background-size: cover;
     }
   }
 
   @media (min-width: @desktop-width) {
-    background: url(../img/phone-in-hand-desk.png) 146px 110px no-repeat scroll, url(../img/back-desktop.jpg) 50% -110px no-repeat scroll;
+    background: url(../img/phone-in-hand-desk.png) 146px 184px no-repeat scroll, url(../img/back-desktop.jpg) 50% top no-repeat scroll;
     @media (min-resolution: 2dppx) {
-      background: url(../img/phone-in-hand-desk@2x.png) 0% 110px no-repeat scroll, url(../img/back-desktop@2x.jpg) 50% -110px no-repeat scroll;
+      background: url(../img/phone-in-hand-desk@2x.png) 0% 184px no-repeat scroll, url(../img/back-desktop@2x.jpg) 50% top no-repeat scroll;
       background-size: cover;
     }
   }
@@ -31,14 +32,19 @@
 }
 
 .download-aplication__wrapper {
-  width: 87%;
-  margin: 0 20px;
-  margin-top: 0;
+  max-width: 400px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: transparent;
 
+
   @media (min-width: @tablet-width){
-    width: 48%;
-    margin-bottom: 119px;
+    width: 46%;
+    margin-bottom: 95px;
+    padding: 0 20px;
+    margin-left: 0;
+    background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
@@ -49,27 +55,27 @@
 
 .download-header__slogan {
   display: block;
-  font-family: "Open Sans";
   font-style: normal;
   color: @whiteback;
   font-weight: 300;
   font-size: 24px;
   line-height: 23px;
   text-align: center;
-  padding-top: 29px;
+  padding-top: 95px;
   margin-bottom: 320px;
-  margin-top: 0;
   background-color: transparent;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
-    padding-top: 102px;
+    padding-top: 212px;
     margin-bottom: 39px;
+    line-height: 43px;
     padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 114px;
+    padding-top: 212px;
     margin-bottom: 51px;
   }
 }
@@ -85,7 +91,6 @@
 .download-aplication__download {
   display: block;
   color: @whiteback;
-  font-family: Open Sans;
   font-style: normal;
   font-size: 18px;
   line-height: 18px;
@@ -94,8 +99,10 @@
   border: 3px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 29px;
-  padding: 21px 48px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   margin-bottom: 38px;
+  margin-top: 348px;
 
   &:hover {
     background-color: @whiteback;
@@ -109,6 +116,7 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 46px;
     margin-top: 0;
+    line-height: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -125,11 +133,19 @@
 
   @media (min-width: @tablet-width) {
     justify-content: space-around;
-    margin-bottom: 48px;
+    margin-bottom: 38px;
+    margin-top: 0;
+    line-height: 0;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 58px;
+  }
+}
+
+.systems-list__item {
+  @media (min-width: @tablet-width) {
+    margin-right: 35px;
   }
 }
 
@@ -148,7 +164,9 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    font-weight: 300;
     margin-top: 0;
-    padding-bottom: 137px;
+    padding-bottom: 119px;
+    line-height: 19px;
   }
 }

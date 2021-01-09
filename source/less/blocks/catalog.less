@@ -17,7 +17,6 @@
 }
 
 .catalog__catalog-title {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -81,6 +80,10 @@
 .catalog__panorama-photo {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -137,11 +140,11 @@
   background-color: @greybackground;
   padding-left: 17px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     display: block;
-    margin-top: 30px;
+    margin-top: -7px;
     padding-left: 30px;
     align-self: end;
   }
@@ -167,23 +170,22 @@
 }
 
 .catalog__author-name {
-  font-family: Open Sans;
   font-weight: bold;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
-  text-align: center;
   color: @darkbluetextcolor;
+  padding-top: 25px;
 }
 
 .catalog__panorama-photo-author {
   @media (min-width: @tablet-width) {
     text-align: start;
+    margin-top: 30px;
   }
 }
 
 .catalog__photos-time {
-  font-family: Open Sans;
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
@@ -203,17 +205,14 @@
   }
 }
 
-.catalog__photos-likes {
-  font-family: Open Sans;
-  font-size: 12px;
-  line-height: 24px;
-  text-align: right;
-  text-transform: uppercase;
-  color: @pinkred;
-  padding-left: 48px;
+.catalog__likes {
+  width: 20px;
+  height: 20px;
+  border: none;
   background-image: url(../img/heart.svg);
   background-repeat: no-repeat;
-  background-position: 17px, 0;
+  order: 1;
+  background-position: 0 5px;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -223,17 +222,48 @@
     background-position: 86% 5px;
     padding-bottom: 30px;
   vertical-align: bottom;
+  order: 2;
+  }
+}
+
+.catalog__user-photo-likes {
+  display: flex;
+}
+
+.catalog__author-info-describe {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.catalog__author-info-likes {
+  display: flex;
+}
+
+.catalog__photos-likes {
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  text-transform: uppercase;
+  color: @pinkred;
+  padding-left: 18px;
+  padding-bottom: 25px;
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    text-align: left;
   }
 }
 
 .catalog__user-photo-likes {
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    margin-top: 30px;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 1;
-  background-position: 90% 5px;
-  margin-left: 57%;
   }
 
   @media (min-width: @desktop-width) {
@@ -242,7 +272,6 @@
 }
 
 .catalog__catalog-describe-bottom {
-  font-family: Open Sans;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
@@ -250,8 +279,7 @@
   color: @darkbluetextcolor;
   margin-top: 49px;
   margin-bottom: 52px;
-  padding-left: 35px;
-  padding-right: 35px;
+
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
