@@ -8,34 +8,33 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <div class="page-header__wraper">
+    <header class="page-header page-header--opened">
         <a class="page-header__logo">
-          <img src="img/pink.svg" alt="логотип PINK" width="74px" height="23px">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logotype-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logotype-white-tablet.svg">
+            <img src="img/pink.svg" alt="логотип PINK" width="74px" height="23px">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--opened  main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <div class="main-navigation__wraper">
             <ul class="main-navigation__navigation-list navigation-list">
-              <li class="navigation-list__item">
-                <a href="index.html">главная</a>
-              </li>
               <li class="navigation-list__item navigation-list__item--active">
-                <a>фотографии</a>
+                <a>Главная</a>
               </li>
               <li class="navigation-list__item">
-                <a href="#">конкурс</a>
+                <a href="catalog.html">Фотографии</a>
               </li>
               <li class="navigation-list__item">
-                <a href="#">html academy</a>
+                <a href="#">Конкурс</a>
+              </li>
+              <li class="navigation-list__item">
+                <a href="#">HTML Academy</a>
               </li>
             </ul>
-          </div>
         </nav>
-      </div>
-      </div>
     </header>
     <script>
       var navMain = document.querySelector('.main-navigation');
@@ -66,7 +65,7 @@
           <img src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="панорама дня">
         </picture>
           <div class="catalog__author-info catalog__catalog-wrapper">
-              <figure class="catalog__user-photo panorama-photo">
+              <figure class="panorama-photo">
                 <p class="catalog__author-name catalog__panorama-photo-author">Анна
                   <span class="catalog__photos-time">(5 минут назад)</span>
                 </p>
@@ -118,7 +117,7 @@
                           <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
                           <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="фотография музыкальных инструментов">
                         </picture>
-                          <div class="catalog__author-info">
+                        <div class="catalog__author-info">
                             <div class="catalog__author-info-describe">
                               <p class="catalog__author-name">Антон
                                 <span class="catalog__photos-time">(12 часов назад)</span>
@@ -132,7 +131,7 @@
                                 <span class="visually-hidden">поставить лайк</span>
                               </button>
                             </div>
-                          </div>
+                        </div>
                       </figure>
                     </li>
                     <li class="catalog__photos-item">
@@ -180,7 +179,7 @@
                               <span class="visually-hidden">поставить лайк</span>
                             </button>
                           </div>
-                          </div>
+                        </div>
                       </figure>
                     </li>
                     <li class="catalog__photos-item">
