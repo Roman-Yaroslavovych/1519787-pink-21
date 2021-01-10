@@ -1,18 +1,49 @@
 .price {
+  margin: 0;
   background-color: @greybackground;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 117px;
+  }
+}
+
+.price__wrapper {
+  padding-top: 81px;
+  width: 87%;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 93%;
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 130px;
+    width: 78%
+  }
 }
 
 .price__title {
   background-color: @darkbluetextcolor;
 }
 
-.price__tariff {
+.price__tariff-name {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   color: @whiteback;
   text-align: center;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-top: 19px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    margin-top: 23px;
+  }
 }
 
 .price__tariff-price {
@@ -22,11 +53,75 @@
   text-align: center;
   color: @whiteback;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .price__tariff-description {
   font-weight: normal;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 1;
   text-transform: uppercase;
+  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.price__slider {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.price__slider--current {
+  display: block;
+}
+
+.price__tariff-proposition {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.price__symbol {
+  text-align: right;
+  line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.advantages__toggles {
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.price__options {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    line-height: 1;
+    margin-left: 20px;
+  }
 }

@@ -1,24 +1,56 @@
 .page-header {
-  background-color: @black;
-  background-image: url(../img/back-mobile.jpg);
-  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
   list-style: none;
   color: @whiteback;
+<<<<<<< HEAD
 
   @media (min-width: @desktop-width) {
     margin: 0 130px;
   }
+||||||| a0bffda
+=======
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+>>>>>>> master
 }
 
-.navigation-list a {
-  color: @whiteback;
+.page-header__wraper {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    min-width: 940px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-.navigation-list__catalog-title {
-  font-size: 24px;
-  line-height: 33px;
-  text-align: center;
-  font-weight: 300;
+.page-header__logo {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.page-header__logo img {
+  display: block;
+  width: 74px;
+  height: 23px;
+  padding-top: 22px;
+  padding-bottom: 21px;
+  padding-left: 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 145px;
+    height: 40px;
+    padding-top: 27px;
+  padding-bottom: 43px;
+  }
 }
 
 .page-header__competition-title {
@@ -37,3 +69,4 @@
       margin: 0 130px;
     }
 }
+
