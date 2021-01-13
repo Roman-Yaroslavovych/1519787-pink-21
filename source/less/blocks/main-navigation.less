@@ -4,15 +4,6 @@
   @media (min-width: @desktop-width) {
     background-color: rgba(0, 0, 0, 0.3)
   }
-}
-
-.main-navigation__wraper {
-  display: block;
-  justify-content: center;
-  margin: 0 20px;
-  padding: 0;
-  min-width: 280px;
-
 
   @media (min-width: @tablet-width) {
     min-width: 620px;
@@ -71,14 +62,16 @@
 }
 
 .main-navigation--opened .main-navigation__toggle {
-  top: 21px;
-  right: 20px;
+  top: 0;
+  right: 0;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    width: 30px;
+    top: 23px;
+    right: 20px;
+    width: 23px;
     height: 2px;
     background-color: @whiteback;
   }
@@ -112,4 +105,3 @@
 .main-navigation--nojs .main-navigation__toggle {
   display: none;
 }
-

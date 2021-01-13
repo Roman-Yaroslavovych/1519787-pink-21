@@ -1,32 +1,47 @@
 .photos-settings {
   background-color: @greybackground;
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 130px;
+    padding: 0;
+  }
 }
 
 .photos-settings__settings-group {
 
   @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 54px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 47px;
   }
 
   @media (min-width: @desktop-width) {
+    grid-template-columns: 300px 1fr;
     margin-left: 80px;
-    margin-right: 90px;
+    margin-right: 60px;
+    column-gap: 90px;
   }
 }
 
 .photos-settings__buttons {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-self: center;
-  margin-top: 38px;
+  margin-top: 73px;
   margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
     justify-self: stretch;
+    align-self: end;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,12 +51,36 @@
   }
 }
 
+.photos-settings__button-sent::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 1px;
+  background-color: @darkbluetextcolor;
+  opacity: 0.3;
+  top: -38px;
+  left: -10%;
+  background-repeat: repeat-x;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .photos-settings__settings {
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: -1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 300px;
   }
 }
 
@@ -84,8 +123,170 @@
   margin-bottom: 41px;
   opacity: 0.1;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     width: 183px;
-    margin-bottom: 0;
+  }
+}
+
+.photos-settings__img {
+  padding-top: 20px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.photos-settings__settings-icons {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  margin-top: 35px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 0;
+    align-self: baseline;
+    padding-top: 9px;
+  }
+}
+
+.photos-settings__settings-item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+    padding-top: 27px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+.photos-settings__contrast {
+  margin-top: 6px;
+}
+
+.photos-settings__icon--active g {
+  opacity: 1;
+
+  & path {
+  fill: @pinkred;
+  }
+}
+
+.photos-settings__scale {
+  -webkit-appearance: none;
+  margin: 0 20px;
+  width: 86%;
+  background-color: @greybackground
+  }
+
+  .photos-settings__scale::-webkit-slider-runnable-track {
+  width: 240px;
+  height: 2px;
+  cursor: pointer;
+  background-color: @darkbluetextcolor;
+}
+
+.photos-settings__scale::-webkit-slider-thumb {
+  border: 2px solid @pinkred;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background:@whiteback;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+.photos-settings__range--mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.photos-settings__scale-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.photos-settings__crop {
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+
+    & path {
+      fill: @pinkred;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.photos-settings__fill {
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+
+    & path {
+      fill: @pinkred;
+    }
+
+    & g {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48px;
+    height: 43px;
+
+    & path {
+      fill: @pinkred;
+    }
+
+    & g {
+      opacity: 1;
+    }
+  }
+}
+
+.photos-settings__contrast {
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+
+    & path {
+      fill: @pinkred;
+    }
+
+    & g {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
   }
 }

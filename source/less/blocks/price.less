@@ -1,6 +1,12 @@
 .price {
   margin: 0;
-  background-color: @greybackground;
+  background-image: url(../img/grey-background-price.svg);
+  background-repeat: no-repeat;
+  background-position: 50% top;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 98px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 117px;
@@ -27,6 +33,17 @@
 
 .price__title {
   background-color: @darkbluetextcolor;
+}
+
+.price__title-standart {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    background-image: url(../img/HIT.svg);
+  }
 }
 
 .price__tariff-name {
@@ -67,11 +84,16 @@
 }
 
 .price__tariff-description {
+  display: block;
   font-weight: normal;
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
-  margin-left: 20px;
+  padding-left: 20px;
+  padding-bottom: 25px;
+  padding-top: 24px;
+  border: 2px solid #E5E5E5;
+  border-radius: 1px 0px 0px 0px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -95,17 +117,41 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: @tablet-width) {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .price__symbol {
+  position: relative;
   text-align: right;
   line-height: 1;
 
   @media (min-width: @tablet-width) {
     display: block;
     text-align: center;
+  }
+}
+
+.price__yes {
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 21px;
+    background-image: url(../img/yes.svg);
+  }
+}
+
+.price__no {
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    background-image: url(../img/no.svg);
   }
 }
 

@@ -51,7 +51,6 @@
 
 .catalog__catalog-describe {
   color:@darkbluetextcolor;
-  font-family: "Open Sans";
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -79,9 +78,38 @@
   }
 }
 
-.catalog blockquote {
+.catalog__panorama-photo {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    background-image: url(../img/panorama-icon.svg);
+    background-repeat: no-repeat;
+    top: 0;
+    right: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 54px;
+      right: 130px;
+    }
+  }
+}
+
+.catalog__user-photo {
   background-color: @greybackground;
-  margin-bottom: 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    height: 100%;
+  }
 }
 
 .catalog__photos-list {
@@ -101,12 +129,22 @@
   }
 }
 
-.catalog__user-photo {
-  margin: 0;
+.catalog__photos-list img {
+  width: 100%;
 }
 
 .catalog__author-info {
   background-color: @greybackground;
+  padding-left: 17px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 30px;
+    padding-left: 30px;
+    align-self: end;
+  }
 }
 
 .panorama-photo {
@@ -115,6 +153,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.catalog__panorama-photo img {
+  width: 100%;
 }
 
 .catalog__user-photo-text {
@@ -127,6 +169,7 @@
 .catalog__author-name {
   font-family: Open Sans;
   font-weight: bold;
+  font-style: normal;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -149,11 +192,15 @@
 }
 
 .catalog__text {
-  font-family: "Open Sans";
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   color: @darkbluetextcolor;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 38px;
+  }
 }
 
 .catalog__photos-likes {
@@ -171,19 +218,26 @@
   @media (min-width: @tablet-width) {
     display: block;
     text-align: start;
-    margin-left: 30px;
+    margin-left: 0;
     padding-left: 0;
-    background-position: 227px, 0;
+    background-position: 86% 5px;
+    padding-bottom: 30px;
+  vertical-align: bottom;
   }
 }
 
 .catalog__user-photo-likes {
+
   @media (min-width: @tablet-width) {
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 1;
-  background-position: 106px, 0;
-  margin-left: 171px;
+  background-position: 90% 5px;
+  margin-left: 57%;
+  }
+
+  @media (min-width: @desktop-width) {
+  margin-left: 65%;
   }
 }
 
