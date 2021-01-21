@@ -32,10 +32,15 @@
   width: 75px;
   padding-left: 20px;
   cursor: pointer;
+  fill: @whiteback;
 
   &:hover .logo-icon {
-path {
-    fill: @pinkred;}
+    fill: @pinkred;
+  }
+
+  &:active .logo-icon {
+    fill: @whiteback;
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
