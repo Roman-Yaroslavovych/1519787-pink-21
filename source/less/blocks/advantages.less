@@ -1,40 +1,66 @@
 .advantages {
- background-image: url(../img/grey-background.svg);
- background-position: 50% 174+63px;
- background-repeat: no-repeat;
+  position: relative;
   margin-top: 0;
-  background-color: @greybackground;
+  background-color: @whiteback;
+  z-index: 4;
+  background-image: url(../img/grey-background.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 220px;
 
   @media (min-width: @tablet-width) {
-    margin-top: -118px;
-    background-position: 50% 220px;
+    margin-top: -110px;
+    background-position: 50% 230px;
   }
 
   @media (min-width: @desktop-width) {
     background-position: 100% 355px;
-    background-color: @whiteback;
     background-size: cover;
   }
 }
 
 .advantages__wrapper {
-  margin: 0 auto;
-  width: 280px;
+margin: 0 auto;
+  max-width: 400px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     min-width: 620px;
     position: relative;
-    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 940px;
+    max-width: 1000px;
+    z-index: 1;
+    margin-top: -73px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
+.advantages__describe-efect-wrapper {
+  display: flex;
+}
+
+.advantages__advantages-offer {
+  position: relative;
+  background-color: @whiteback;
+  z-index: 3;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 800px;
   }
 }
 
 .advantages__offer-title {
   font-size: 24px;
-  font-family: Open Sans;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
@@ -54,37 +80,38 @@
     font-size: 50px;
     line-height: 68px;
     min-width: 780px;
-    padding-top: 102px;
+    padding-top: 77px;
   }
 }
 
 .advantages__offer-title-propose {
   font-size: 24px;
-  font-family: Open Sans;
   font-style: normal;
   font-weight: 300;
   line-height: 29px;
   text-align: center;
   margin: 0;
-  margin-bottom: 123px;
+  margin-bottom: 80px;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 54px;
     margin-top: 0;
+    margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
     min-width: 780px;
+    padding-bottom: 77px;
   }
 }
 
 
 .advantages__list {
   list-style: none;
-  margin-top: 0;
+  margin-top: 123px;
   padding-left: 0;
 
   @media (min-width: @tablet-width) {
@@ -95,16 +122,17 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    padding-right: 20px;
+    padding-right: 0;
 
     &:first-child {
-      margin-top: 75px;
+      margin-top: 73px;
     }
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 }
 
@@ -118,10 +146,9 @@
 
 .advantages__title {
   position: relative;
-  font-family: Open Sans;
   font-weight: bold;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 14px;
   color: @black;
   text-align: center;
   margin: 0;
@@ -138,15 +165,15 @@
     z-index: 2;
     background-color: @greybackground;
     padding-top: 59px;
+    text-align: center;
   }
 }
 
 .advantages__description {
-  font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
   color: @darkbluetextcolor;
   text-align: center;
   margin: 0;
@@ -160,13 +187,21 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    text-align: center;
   }
 }
 
 .advantages__iphone {
+  width: 157px;
+  height: 320px;
   display: flex;
-  justify-content: center;
-  margin: 0;
+  align-content: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 547px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -188,7 +223,6 @@
 
   @media (min-width: @desktop-width) {
     min-width: 940px;
-    padding: 0 130px;
     padding-bottom: 67px;
     margin-top: 0;
     background-color: @greybackground;
@@ -201,7 +235,6 @@
 }
 
 .advantages__describe-efect-title {
-  font-family: Open Sans;
 font-style: normal;
 font-weight: bold;
 font-size: 30px;
@@ -216,7 +249,7 @@ margin-top: 102px;
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: -118+47px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -229,6 +262,11 @@ margin-top: 102px;
   margin-top: 54px;
   margin-right: 71px;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    margin-top: 59px;
+  }
 }
 
 .advantages__clock img {
@@ -247,6 +285,7 @@ margin-top: 102px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: baseline;
   }
 }
 
@@ -266,7 +305,6 @@ margin-top: 102px;
 .advantages__about-research {
 
     @media (min-width: @tablet-width) {
-    font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;

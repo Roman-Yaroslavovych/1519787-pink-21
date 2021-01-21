@@ -1,5 +1,6 @@
 .forms {
   background-color: @whiteback;
+  width: 100%;
 }
 
 <<<<<<< HEAD
@@ -37,29 +38,34 @@
 
 
 .forms__form-title {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   display: block;
-  padding-top: 36px;
+  padding-top: 102px;
   padding-bottom: 51px;
   margin-bottom: 0;
   margin-top: 0;
   text-align: center;
   color: @whiteback;
   background-image: url(../img/back-mobile.jpg);
-  background-position: 50% -66px;
+  background-position: 50% top;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     background-image: url(../img/back-tablet.jpg);
-    background-position: 50% -110px;
+    padding-top: 191px;
+    padding-bottom: 74px;
+    font-size: 50px;
+    line-height: 58px;
+    background-size: unset;
   }
 
   @media (min-width: @desktop-width) {
     background-image: url(../img/back-desktop.jpg);
+    padding-top: 184px;
   }
 }
 
@@ -71,13 +77,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 4;
-    gap: 74px;
+    column-gap: 74px;
   }
 }
 
 >>>>>>> master
 .forms__competition-describe {
-  font-family: Open Sans;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -115,9 +120,22 @@
   order: 1;
   margin-bottom: 44px;
   padding-bottom: 0;
+  max-width: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 526px;
+    max-width: 800px;
+  }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    min-width: auto;
+  margin: 0;
+  margin-top: 11px;
+  padding: 0;
   }
 >>>>>>> master
 }
@@ -139,7 +157,7 @@ margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 56px;
-display: flex;
+    display: flex;
   }
 
   @media (min-width: @desktop-width) {
@@ -150,20 +168,27 @@ display: flex;
 .forms__passport-form label {
 >>>>>>> master
   font-size: 14px;
-  line-height: 30px;
+  line-height: 10px;
   text-transform: uppercase;
   color: @pinkred;
+<<<<<<< HEAD
 <<<<<<< HEAD
   padding-bottom: 17px;
 ||||||| a0bffda
 =======
   padding-bottom: 17px;
+||||||| merged common ancestors
+  padding-bottom: 17px;
+=======
+  padding-bottom: 23px;
+>>>>>>> module6-task3
   margin-left: 23px;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     margin-right: 20px;
-    padding-top: 23px;
+    padding-top: 26px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -182,18 +207,32 @@ display: flex;
   &__surname-input {
 =======
 .forms__passport-form input {
+<<<<<<< HEAD
   display: block;
 >>>>>>> master
   font-size: 14px;
   text-transform: uppercase;
+||||||| merged common ancestors
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+=======
+  font-size: 18px;
+>>>>>>> module6-task3
   color: @pinkred;
+<<<<<<< HEAD
 <<<<<<< HEAD
   min-width: 280px;
 ||||||| a0bffda
 =======
   min-width: 276px;
 >>>>>>> master
+||||||| merged common ancestors
+  min-width: 276px;
+=======
+>>>>>>> module6-task3
   display: block;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     @media (min-width: @tablet-width) {
@@ -221,14 +260,21 @@ display: flex;
 =======
   padding-top: 23px;
   padding-bottom: 23px;
+||||||| merged common ancestors
+  padding-top: 23px;
+  padding-bottom: 23px;
+=======
+  height: 55px;
+  padding-top: 0;
+  padding-bottom: 0;
+>>>>>>> module6-task3
   padding-left: 20px;
   border: 2px solid @borderlightgray;
   border-radius: 1px;
-  width: 100%;
+  width: 90%;
 
     @media (min-width: @tablet-width) {
       margin-left: 0;
-
     }
 
     @media (min-width: @desktop-width) {
@@ -256,7 +302,12 @@ display: flex;
     grid-column-start: 1;
     grid-column-end: -1;
     background-color: @whiteback;
+<<<<<<< HEAD
 >>>>>>> master
+||||||| merged common ancestors
+=======
+    margin-top: 0;
+>>>>>>> module6-task3
   }
 }
 
@@ -402,6 +453,8 @@ display: flex;
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: -1;
+    margin-top: 0;
+    margin-bottom: 64px;
   }
 }
 
@@ -485,10 +538,9 @@ display: flex;
 }
 
 .forms__contacts-form label {
-  font-family: Open Sans;
   color: @pinkred;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 10px;
   text-transform: uppercase;
   margin-left: 24px;
   margin-bottom: 17px;
@@ -496,6 +548,9 @@ display: flex;
 
   @media (min-width: @desktop-width) {
     margin-right: 37px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    margin-bottom: 0;
   }
 }
 
@@ -580,7 +635,7 @@ display: flex;
       height: 59px;
       background-image: url(../img/phone-icon.svg);
       background-repeat: no-repeat;
-      top: -97px;
+      top: -95px;
       left: 413px;
   }
 }
@@ -592,7 +647,7 @@ display: flex;
       height: 59px;
       background-image: url(../img/phone-icon.svg);
       background-repeat: no-repeat;
-      top: -97px;
+      top: -95px;
       left: 289px;
     }
   }
@@ -609,7 +664,7 @@ display: flex;
       width: 59px;
       height: 59px;
       background-image: url(../img/mail-icon.svg);
-      top: -97px;
+      top: -95px;
       left: 413px;
       background-repeat: no-repeat;
       }
@@ -622,7 +677,7 @@ display: flex;
       width: 59px;
       height: 59px;
       background-image: url(../img/mail-icon.svg);
-      top: -97px;
+      top: -95px;
       left: 289px;
       background-repeat: no-repeat;
     }
@@ -666,6 +721,12 @@ display: flex;
   border: 2px solid @borderlightgray;
   border-radius: 1px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
 }
 
 .forms__mobile-system label {
@@ -677,7 +738,6 @@ display: flex;
 }
 
 .forms__mobile-system-title {
-  font-family: "Open Sans";
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -697,13 +757,18 @@ display: flex;
 .forms__mobile-system label {
   position: relative;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 13px;
   align-items: center;
   color: @darkbluetextcolor;
   display: block;
   margin-bottom: 62px;
   margin-left: 70px;
   color: @darkbluetextcolor;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 144px;
+    margin-bottom: 63px;
+  }
 }
 
 .forms__mobile-system label:last-child {
@@ -846,8 +911,10 @@ display: flex;
   width: 100%;
 
   @media (min-width: @desktop-width) {
-    min-width: 816px;
+    width: 816px;
     min-height: 124px;
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 
@@ -855,6 +922,10 @@ display: flex;
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
   }
 }
 

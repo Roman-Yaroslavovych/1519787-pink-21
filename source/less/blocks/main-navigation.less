@@ -10,6 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -110px;
     min-width: 620px;
   }
 }
@@ -38,6 +39,10 @@
 .main-navigation--opened {
   display: block;
   margin-top: -9px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -110px;
+  }
 }
 
 .main-navigation--closed .main-navigation__toggle::before {
@@ -74,6 +79,10 @@
     width: 23px;
     height: 2px;
     background-color: @whiteback;
+
+    @media (min-width: @tablet-width) {
+      top: 43px;
+    }
   }
 
   &::before {
