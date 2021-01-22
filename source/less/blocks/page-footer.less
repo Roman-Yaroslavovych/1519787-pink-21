@@ -47,26 +47,24 @@
 }
 
 .page-footer__logo {
+  display: block;
   margin-bottom: 41px;
 }
 
-.page-footer__main-logo img {
+.page-footer__logo-desktop {
   display: none;
-
   @media (min-width: @desktop-width) {
     display: block;
-    width: 147px;
-    height: 40px;
   }
 }
 
-.page-footer__main-logo svg {
+.page-footer__logo-mobile {
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
-.page-footer__main-logo:active {
+/*.page-footer__main-logo:active {
   & path {
     opacity: 0.3;
   }
@@ -75,6 +73,16 @@
 .page-footer__main-logo:hover {
   & path {
     fill: @pinkred;
+  }
+}*/
+
+.page-footer__main-logo {
+  cursor: pointer;
+
+  & .glasses {
+    path {
+      fill: green;
+    }
   }
 }
 
@@ -92,11 +100,6 @@
   margin-bottom: 41px;
 }
 
-.social__link:hover {
-  & circle {
-    opacity: 1;
-  }
-}
 
 .social__link:active {
   & path {opacity: 0.3;};

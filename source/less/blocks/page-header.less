@@ -1,7 +1,9 @@
-.page-header {
+.page-header--opened {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.3);
   list-style: none;
   color: @whiteback;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   @media (min-width: @desktop-width) {
@@ -15,41 +17,111 @@
     justify-content: space-between;
   }
 >>>>>>> master
+||||||| merged common ancestors
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+=======
+  z-index: 2;
+  margin: 0 auto;
+  min-width: 100%;
+>>>>>>> module6-task3
 }
 
-.page-header__wraper {
+.page-header {
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.3);
-  min-width: 280px;
+  list-style: none;
+  color: @whiteback;
+  z-index: 2;
   margin: 0 auto;
   padding: 0;
+  top: 0;
+  left: 0;
+  min-width: 100%;
 
-  @media (min-width: @desktop-width) {
-    min-width: 940px;
-    display: flex;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
 .page-header__logo {
-  padding-bottom: 0;
-  margin-bottom: 0;
+  position: relative;
+  display: block;
+  width: 75px;
+  padding-left: 20px;
+  cursor: pointer;
+  fill: @whiteback;
+
+  &:hover .logo-icon {
+    fill: @pinkred;
+  }
+
+  &:active .logo-icon {
+    fill: @whiteback;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+  }
 }
 
-.page-header__logo img {
+.page-header__logo-mobile {
   display: block;
   width: 74px;
   height: 23px;
   padding-top: 22px;
   padding-bottom: 21px;
-  padding-left: 20px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
     width: 145px;
     height: 40px;
     padding-top: 27px;
-  padding-bottom: 43px;
+    padding-bottom: 43px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-desktop {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 145px;
+    height: 40px;
+    padding-top: 27px;
+    padding-bottom: 43px;
+    margin: 0;
   }
 }
 
