@@ -38,7 +38,7 @@
   }
 }
 
-/*.page-footer__main-logo:active {
+.page-footer__main-logo:active {
   & path {
     opacity: 0.3;
   }
@@ -47,16 +47,6 @@
 .page-footer__main-logo:hover {
   & path {
     fill: @pinkred;
-  }
-}*/
-
-.page-footer__main-logo {
-  cursor: pointer;
-
-  & .glasses {
-    path {
-      fill: green;
-    }
   }
 }
 
@@ -74,8 +64,18 @@
   margin-bottom: 41px;
 }
 
-.tviter circle {
+.social__link:hover {
+  & circle {
+    opacity: 1;
+  }
+}
+
+.social__link:active {
+  & path {opacity: 0.3;};
+
+  & circle {
     opacity: 0.1;
+  }
 }
 
 .page-footer__copyright {
