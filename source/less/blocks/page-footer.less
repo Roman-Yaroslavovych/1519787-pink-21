@@ -74,13 +74,8 @@
   margin-bottom: 41px;
 }
 
-
-.social__link:active {
-  & path {opacity: 0.3;};
-
-  & circle {
+.tviter circle {
     opacity: 0.1;
-  }
 }
 
 .page-footer__copyright {
@@ -98,15 +93,14 @@
   margin-right: 15px;
 }
 
-.copyright__link:hover {
-  & path {
+.copyright__link {
+  fill: @pinkred;
+
+  &:hover {
     fill: @darkbluetextcolor;
   }
-}
 
-.copyright__link:active {
-  & path {
-    fill: @darkbluetextcolor;
+  &:active {
     opacity: 0.3;
   }
 }
