@@ -88,7 +88,52 @@
             </ul>
         </nav>
     </header>
+<<<<<<< HEAD
     <script src="/js/script.js">
+||||||| 08ea305
+    <script>
+      var navMain = document.querySelector('.main-navigation');
+      var navToggle = document.querySelector('.main-navigation__toggle');
+
+      navMain.classList.remove('main-navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-navigation--closed')) {
+          navMain.classList.remove('main-navigation--closed');
+          navMain.classList.add('main-navigation--opened');
+        } else {
+          navMain.classList.add('main-navigation--closed');
+          navMain.classList.remove('main-navigation--opened');
+        }
+      });
+=======
+<<<<<<< HEAD
+    <main class="forms">
+      <div class="forms__wrapper">
+        <p class="forms__competition-describe">Поделитесь своей историей и получите
+          шанс выиграть ценный приз — 1000
+          миль на вашу бонусную карту!
+        </p>
+||||||| a0bffda
+    <main class="forms">
+      <div class="forms__wrappaer">
+=======
+    <script>
+      var navMain = document.querySelector('.main-navigation');
+      var navToggle = document.querySelector('.main-navigation__toggle');
+
+      navMain.classList.remove('main-navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-navigation--closed')) {
+          navMain.classList.remove('main-navigation--closed');
+          navMain.classList.add('main-navigation--opened');
+        } else {
+          navMain.classList.add('main-navigation--closed');
+          navMain.classList.remove('main-navigation--opened');
+        }
+      });
+>>>>>>> master
     </script>
      <main class="forms">
       <h2 class="forms__form-title">Конкурс на самое<br>
@@ -100,11 +145,29 @@
           шанс выиграть ценный приз — 1000
           миль на вашу бонусную карту!
         </p>
+>>>>>>> master
         <section class="forms__main-form">
           <form class="forms__passport passport" action="https://echo.htmlacademy.ru" method="POST">
             <div class="forms__passport-form">
             <label class="forms__surname-label" for="surname">фамилия:</label>
               <input class="forms__surname-input" type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
+<<<<<<< HEAD
+            </label>
+            <label class="forms__name-label" for="name">имя:
+              <input class="forms__name-input" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
+            </label>
+            <label class="forms__middle-name-label" for="name">отчество:
+              <input class="forms__middle-name-input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+            </label>
+||||||| a0bffda
+            </label>
+            <label class="forms__name-label" for="name">имя:
+              <input class="forms__name-label" type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
+            </label>
+            <label class="forms__middle-name-label" for="name">отчество:
+              <input class="forms__middle-name-label" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+            </label>
+=======
             </div>
             <div class="forms__passport-form">
             <label class="forms__name-label" for="name">имя:</label>
@@ -114,13 +177,29 @@
             <label class="forms__middle-name-label" for="name">отчество:</label>
               <input class="forms__middle-name-input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
             </div>
+>>>>>>> master
           </form>
+<<<<<<< HEAD
+          <div class="forms__achievements-wrapper">
+            <p class="forms__achievements-describe">Ваши безбашенные
+||||||| a0bffda
+          <form class="forms__achievements achievements">
+            <p class="forms__achievements-describe">Ваши безбашенные
+=======
           <div class="forms__achievements-wrapper">
             <fieldset class="forms__system-fields" >
             <legend class="forms__achievements-describe">Ваши безбашенные
+>>>>>>> master
               достижения в путешествии
+<<<<<<< HEAD
+            <p>
+            <form class="forms__achievements achievements">
+||||||| a0bffda
+            <p>
+=======
             </legend>
             <form class="forms__achievements achievements">
+>>>>>>> master
             <label class="forms__selfie-lable" for="selfie">
               <input class="forms__input" type="checkbox" id="selfie" checked>Сделал селфи с акулой
             </label>
@@ -137,6 +216,83 @@
               <input class="forms__input" type="checkbox" id="castle" checked>Удержал башню
             </label>
             <label class="forms__hotel-lable" for="hotel">
+<<<<<<< HEAD
+              <input class="forms__hotel-input" type="checkbox" id="hotel">Разгромил отель
+            </label>
+            </form>
+          </div>
+          <div class="forms__contacts-wrapper">
+            <p class="forms__contacts-title">контактная информация</p>
+            <form class="forms__contacts-form">
+              <label class="forms__contacts-phone" for="phone">номер телефона</label>
+                <input class="forms__phone-input" type="number" id="phone" placeholder="Номер, пожалуйста">
+              <label class="forms__mail" for="mail">адрес почты</label>
+                <input class="forms__mail-input" type="text" id="mail" placeholder="Введите почту *" required>
+            </form>
+          </div>
+          <div class="forms__mobile-system-wrapper">
+            <form class="forms__mobile-system">
+              <p class="forms__mobile-system-title">С каким приложением
+                путешествовали?</p>
+              <label class="forms__pink-ios" for="ios">
+                <input class="forms__input-ios" type="radio" value="ios" name="system" checked>
+                  Pink для iOS
+              </label>
+              <label class="forms__pink-android" for="android">
+                <input class="forms__input-android" type="radio" value="android" name="system">
+                    Pink на Android
+              </label>
+              <label class="forms__pink-windows" for="windows">
+                <input class="forms__input-android" type="radio" value="windows" name="system">
+                    Windows Phone
+              </label>
+            </form>
+          </div>
+          <div class="forms__comments-wrapper">
+            <form class="forms__comments">
+              <p class="forms__coments-describe">опишите свои эмоции</p>
+              <textarea class="forms__textarea" name="comment" id="comment-field" rows="3">Можно прям в красках, не стесняясь в выражениях
+              </textarea>
+              <div class="forms__submit">
+                <input class="forms__submit-button" type="submit" value="отправить форму">
+                <p class="forms__required-fields"><span class="forms__star">*</span> — обязательные поля</p>
+              </div>
+            </form>
+          </div>
+||||||| a0bffda
+              <input class="forms__hotel-input" type="checkbox" id="hotel">Разгромил отель
+            </label>
+          </form>
+          <form class="forms__contcts-form">
+            <label class="forms__contacts-phone" for="phone">номер телефона</label>
+              <input class="forms__phone-input" type="number" id="phone" placeholder="Номер, пожалуйста">
+            <label class="forms__mail" for="mail">адрес почты</label>
+              <input class="forms__mail-input" type="text" id="mail" placeholder="Введите почту *" required>
+          </form>
+          <form class="forms__mobile-system">
+            <p class="forms__mobile-system-title">С каким приложением
+              путешествовали?</p>
+            <label class="forms__pink-ios" for="ios">
+              <input class="forms__input-ios" type="radio" value="ios" name="system" checked>
+                Pink для iOS
+            </label>
+            <label class="forms__pink-android" for="android">
+              <input class="forms__input-android" type="radio" value="android" name="system">
+                  Pink на Android
+            </label>
+            <label class="forms__pink-windows" for="windows">
+              <input class="forms__input-android" type="radio" value="windows" name="system">
+                  Windows Phone
+            </label>
+          </form>
+          <form class="forms__comments">
+            <p class="forms__coments-describe">опишите свои эмоции</p>
+            <textarea class="forms__textarea" name="comment" id="comment-field" rows="3">Можно прям в красках, не стесняясь в выражениях
+            </textarea>
+            <input class="forms__submit-button" type="submit" value="отправить форму">
+              <p class="forms__required-fields"><span class="forms__star">*</span> — обязательные поля</p>
+          </form>
+=======
               <input class="forms__input" type="checkbox" id="hotel">Разгромил отель
             </label>
             </form>
@@ -186,6 +342,7 @@
               </div>
             </form>
           </div>
+>>>>>>> master
         </section>
       </div>
     </section>
