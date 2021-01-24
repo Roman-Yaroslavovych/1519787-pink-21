@@ -3,6 +3,29 @@
   width: 100%;
 }
 
+<<<<<<< HEAD
+.forms__wrapper {
+  margin: 0 20px;
+
+
+  @media (min-width: @desktop-width) {
+    margin: 0 130px;
+  }
+}
+
+.forms__main-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4;
+  }
+}
+
+||||||| a0bffda
+=======
 .forms__wrapper {
   @media (min-width: @tablet-width) {
     min-width: 620px;
@@ -58,11 +81,24 @@
   }
 }
 
+>>>>>>> master
 .forms__competition-describe {
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: @darkbluetextcolor;
+<<<<<<< HEAD
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 130px;
+  }
+||||||| a0bffda
+=======
   margin: 0 20px;
   padding-top: 54px;
   padding-bottom: 55px;
@@ -101,8 +137,21 @@
   margin-top: 11px;
   padding: 0;
   }
+>>>>>>> master
 }
 
+<<<<<<< HEAD
+.forms__passport {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  order: 1;
+}
+
+.forms__passport label {
+||||||| a0bffda
+.forms__surname-label {
+=======
 .forms__passport-form {
 margin-bottom: 29px;
 
@@ -117,11 +166,22 @@ margin-bottom: 29px;
 }
 
 .forms__passport-form label {
+>>>>>>> master
   font-size: 14px;
   line-height: 10px;
   text-transform: uppercase;
   color: @pinkred;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  padding-bottom: 17px;
+||||||| a0bffda
+=======
+  padding-bottom: 17px;
+||||||| merged common ancestors
+  padding-bottom: 17px;
+=======
   padding-bottom: 23px;
+>>>>>>> module6-task3
   margin-left: 23px;
   margin-bottom: 17px;
 
@@ -135,15 +195,79 @@ margin-bottom: 29px;
     margin-left: 0;
     padding-left: 0;
   }
+>>>>>>> master
 }
 
+<<<<<<< HEAD
+.forms__passport input {
+||||||| a0bffda
+.forms {
+  &__middle-name-label,
+  &__name-label,
+  &__surname-input {
+=======
 .forms__passport-form input {
-  font-size: 18px;
-  color: @pinkred;
+<<<<<<< HEAD
   display: block;
+>>>>>>> master
+  font-size: 14px;
+  text-transform: uppercase;
+||||||| merged common ancestors
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+=======
+  font-size: 18px;
+>>>>>>> module6-task3
+  color: @pinkred;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  min-width: 280px;
+||||||| a0bffda
+=======
+  min-width: 276px;
+>>>>>>> master
+||||||| merged common ancestors
+  min-width: 276px;
+=======
+>>>>>>> module6-task3
+  display: block;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+      min-width: 521px;
+    }
+}
+
+.forms__passport input::placeholder {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.forms__achievements-wrapper {
+  order: 2;
+  @media (min-width: @tablet-width) {
+    order: 4;
+    margin-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+||||||| a0bffda
+=======
+  padding-top: 23px;
+  padding-bottom: 23px;
+||||||| merged common ancestors
+  padding-top: 23px;
+  padding-bottom: 23px;
+=======
   height: 55px;
   padding-top: 0;
   padding-bottom: 0;
+>>>>>>> module6-task3
   padding-left: 20px;
   border: 2px solid @borderlightgray;
   border-radius: 1px;
@@ -178,7 +302,12 @@ margin-bottom: 29px;
     grid-column-start: 1;
     grid-column-end: -1;
     background-color: @whiteback;
+<<<<<<< HEAD
+>>>>>>> master
+||||||| merged common ancestors
+=======
     margin-top: 0;
+>>>>>>> module6-task3
   }
 }
 
@@ -186,6 +315,33 @@ margin-bottom: 29px;
   min-width: 280px;
   margin: 0 20px;
   background-color: @greybackground;
+<<<<<<< HEAD
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.forms__burnt-lable {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.forms__souvenir-lable {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+||||||| a0bffda
+=======
 
   @media (min-width: @tablet-width) {
     background-color: @whiteback;
@@ -215,6 +371,7 @@ margin-bottom: 29px;
     grid-row-start: 2;
     grid-row-end: 3;
   }
+>>>>>>> master
 }
 
 .forms__achievements-describe {
@@ -301,6 +458,33 @@ margin-bottom: 29px;
   }
 }
 
+<<<<<<< HEAD
+.forms__contacts-wrapper {
+  order: 3;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.forms__contacts-title {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @pinkred;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.forms__contacts-form {
+||||||| a0bffda
+.forms__contcts-form {
+=======
 .forms__contacts-title {
   font-size: 14px;
   line-height: 30px;
@@ -318,7 +502,23 @@ margin-bottom: 29px;
 }
 
 .forms__contacts-form {
+>>>>>>> master
   background-color: @whiteback;
+<<<<<<< HEAD
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+  }
+||||||| a0bffda
+=======
   display: flex;
   flex-direction: column;
 
@@ -334,6 +534,7 @@ margin-bottom: 29px;
     column-gap: 75px;
     margin: 0 60px;
   }
+>>>>>>> master
 }
 
 .forms__contacts-form label {
@@ -353,6 +554,33 @@ margin-bottom: 29px;
   }
 }
 
+<<<<<<< HEAD
+.forms__contacts-phone {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.forms__mail {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.forms {
+  &__phone-input,
+  &__mail-input {
+||||||| a0bffda
+.forms {
+  &__phone-input,
+  &__mail-input {
+=======
 .forms__contacts-phone {
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
@@ -374,6 +602,7 @@ margin-bottom: 29px;
 .forms__contacts-form input {
   display: block;
   position: relative;
+>>>>>>> master
     font-size: 18px;
     height: 13px;
     color: @darkbluetextcolor;
@@ -463,6 +692,14 @@ margin-bottom: 29px;
   @media (min-width: @tablet-width) {
     order: 2;
     background-color: @whiteback;
+  }
+}
+
+.forms__mobile-system-wrapper {
+  order: 4;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
   }
 }
 
@@ -634,12 +871,38 @@ margin-bottom: 29px;
   }
 }
 
+.forms__comments-wrapper {
+  order: 5;
+  margin-bottom: 26px;
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+  }
+}
+
 .forms__textarea {
   font-family: Open Sans;
   font-size: 18px;
   line-height: 30px;
   color: @darkbluetextcolor;
   text-align: center;
+<<<<<<< HEAD
+
+  @media (min-width: @tablet-width) {
+    min-width: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 816px;
+  }
+}
+
+.forms__submit {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+||||||| a0bffda
+=======
   min-width: 280px;
   min-height: 197px;
   border: 2px solid #E5E5E5;
@@ -690,6 +953,7 @@ margin-bottom: 29px;
     margin-bottom: 52px;
   }
 
+>>>>>>> master
 }
 
 .forms__required-fields {
