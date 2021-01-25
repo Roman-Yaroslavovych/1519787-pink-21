@@ -6,9 +6,9 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="normalize.css">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
   </head>
   <body class="page__body">
-
     <svg style="display: none" role="img">
       <symbol viewBox="0 0 74 23" id="logo-mobile">
         <path d="M0.00496827 1.54857C0.00487772 1.21254 0.135804 0.889818 0.369742 0.649431C0.60368 0.409043 0.922049 0.27008 1.25676 0.262266H8.39001C13.4469 0.262266 16.7751 2.9645 16.7751 7.39179V7.45162C16.7751 12.2977 12.7415 14.8105 7.97274 14.8105H2.53836V21.611C2.55394 21.7874 2.53277 21.9651 2.47619 22.1329C2.41961 22.3006 2.32887 22.4547 2.20973 22.5854C2.09058 22.716 1.94565 22.8204 1.78416 22.8918C1.62266 22.9631 1.44812 23 1.27166 23C1.0952 23 0.920671 22.9631 0.759173 22.8918C0.597674 22.8204 0.452744 22.716 0.333602 22.5854C0.21446 22.4547 0.123708 22.3006 0.0671295 22.1329C0.0105515 21.9651 -0.0106138 21.7874 0.00496827 21.611V1.54857ZM8.07209 12.5171C11.7778 12.5171 14.2119 10.5228 14.2119 7.53139V7.47156C14.2119 4.26078 11.8175 2.59556 8.25092 2.59556H2.58804V12.4772L8.07209 12.5171Z"/>
@@ -56,7 +56,6 @@
         <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
       </symbol>
     </svg>
-
     <header class="page-header page-header--opened">
         <a class="page-header__logo" href="#">
           <svg class="page-header__logo-desktop logo-icon" width="147" height="40">
@@ -90,6 +89,25 @@
         </nav>
     </header>
 <<<<<<< HEAD
+    <script src="/js/script.js">
+||||||| 08ea305
+    <script>
+      var navMain = document.querySelector('.main-navigation');
+      var navToggle = document.querySelector('.main-navigation__toggle');
+
+      navMain.classList.remove('main-navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-navigation--closed')) {
+          navMain.classList.remove('main-navigation--closed');
+          navMain.classList.add('main-navigation--opened');
+        } else {
+          navMain.classList.add('main-navigation--closed');
+          navMain.classList.remove('main-navigation--opened');
+        }
+      });
+=======
+<<<<<<< HEAD
     <main class="forms">
       <div class="forms__wrapper">
         <p class="forms__competition-describe">Поделитесь своей историей и получите
@@ -115,6 +133,7 @@
           navMain.classList.remove('main-navigation--opened');
         }
       });
+>>>>>>> master
     </script>
      <main class="forms">
       <h2 class="forms__form-title">Конкурс на самое<br>
@@ -421,5 +440,5 @@
       </div>
   </div>
 </section>
-  </body>
+</body>
 </html>
