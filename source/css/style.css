@@ -55,6 +55,31 @@ a {
   background-position: 50% top;
   background-repeat: no-repeat;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .page__body {
+    background-image: url(../img/back-mobile2x.jpg);
+  }
+}
+@media (min-width: 660px) {
+  .page__body {
+    background-image: url(../img/back-tablet.jpg);
+  }
+}
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 660px) and (min-resolution: 2dppx) {
+  .page__body {
+    background-image: url(../img/back-tablet2x.jpg);
+  }
+}
+@media (min-width: 1200px) {
+  .page__body {
+    background-image: url(../img/back-desktop.jpg);
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .page__body {
+    background-image: url(../img/back-desktop2x.jpg);
+  }
+}
 @media (min-width: 660px) {
   .page__body {
     background-image: url(../img/back-tablet.jpg);
@@ -73,6 +98,23 @@ a {
   z-index: 2;
   margin: 0 auto;
   min-width: 100%;
+}
+@media (min-width: 1200px) {
+  .page-header--opened {
+    margin: 0 130px;
+  }
+}
+@media (min-width: 660px) {
+  .page-header--opened {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 660px) {
+  .page-header--opened {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .page-header {
   position: absolute;
@@ -177,6 +219,17 @@ a {
   line-height: 33px;
   text-align: center;
   color: #FFFFFF;
+}
+@media (min-width: 660px) {
+  .page-header__competition-title {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__competition-title {
+    margin: 0 130px;
+  }
 }
 .main-navigation {
   background-color: #283645;
